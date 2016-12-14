@@ -1,0 +1,17 @@
+# Config file for fuchsia target for building Rust.
+# See `src/bootstrap/config.toml.example` for other settings.
+
+[rust]
+
+# Disable backtrace, as it requires additional lib support.
+backtrace = false
+
+[target.x86_64-unknown-fuchsia]
+
+cc = "/fuchsia/rust/magenta-rs/tools/x86-64-unknown-fuchsia-cc"
+
+[target.aarch64-unknown-fuchsia]
+
+# Path to the clang wrapper
+cc = "/fuchsia/rust/magenta-rs/tools/aarch64-unknown-fuchsia-cc"
+
